@@ -10,43 +10,14 @@
   <!-- Main Footer -->
   <footer class="main-footer">
     <!-- Default to the left -->
-
     <!-- &copy; 2020 Puche -->
     <span style="display:inline-block; transform: rotate(180deg)">&copy;</span>
-
-       
-    
-       2020 Puche (2022+ <a href="mailto:jokob@duck.com?subject=PiAlert">jokob-sk</a>) | <b>Built on: </b> 
-       
-       <?php 
-        
-        echo date("Y-m-d", ((int)file_get_contents( "buildtimestamp.txt")));        
-       
-       ?> 
-       
-       | <b> Version: </b>
-       
-       <?php      
-
-        $filename = "/.VERSION";
-       
-        if(file_exists($filename))
-        {
-          echo file_get_contents($filename);
-        }
-        else{
-          echo "File not found";
-        }               
-       
-       ?>
-        |
-      <a href="https://github.com/jokob-sk/Pi.Alert/tree/main/docs" target="_blank"> 
-        <span>Docs <i class="fa fa-circle-question"></i>
-      </a><span>
-    
+       2020 Puche (2022+ <a href="mailto:jokob@duck.com?subject=PiAlert">jokob-sk</a>) 
+       | <b>Built on: </b> <?php echo date("Y-m-d", ((int)file_get_contents( "buildtimestamp.txt"))); ?>        
+       | <b> Version: </b> <?php if(file_exists("/.VERSION") { echo file_get_contents("/.VERSION"); } else { echo "File not found"; } ?>
+       | <a href="https://github.com/jokob-sk/Pi.Alert/tree/main/docs" target="_blank"><span>Docs <i class="fa fa-circle-question"></i></a><span>
     <!-- To the right -->
     <div class="pull-right no-hidden-xs">
-
     <!-- Pi.Alert  2.50  <small>(2019-12-30)</small> -->
     <?php
       echo 'Pi.Alert';
